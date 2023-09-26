@@ -39,19 +39,16 @@ def match(pattern: List[str], source: List[str]) -> List[str]:
            if pind==len(pattern) :
                 result.append(" ".join(source[sind:]))
                 return result
-            else:
+           else:
                 current = sind
                 while pattern[pind]!=source[sind]:
                     sind+= 1
                     if sind== len(source):
                         return None
-                result.append(" ".join(source[current:sind]))
+                    result.append(" ".join(source[current:sind]))
 
             
             
-
-            
-
         # 3) if we reached the end of the source but not the pattern
         elif sind == len(source) and pind < len(pattern):
             return None
